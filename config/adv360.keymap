@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "VOLDPAUSEPLAY";
             #binding-cells = <0>;
-            bindings = <&kp K_VOLUME_DOWN>, <&kp K_PLAY_PAUSE>;
+            bindings = <&kp C_VOLUME_DOWN>, <&kp C_PLAY_PAUSE>;
         };
     };
 
