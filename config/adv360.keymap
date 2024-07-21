@@ -35,12 +35,11 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
             retro-tap;
             hold-while-undecided-linger;
-            hold-while-undecided;
         };
 
         voldpauseplay: voldpauseplay {
