@@ -40,6 +40,7 @@
             quick-tap-ms = <100>;
             retro-tap;
             hold-while-undecided-linger;
+            hold-while-undecided;
         };
 
         voldpauseplay: voldpauseplay {
