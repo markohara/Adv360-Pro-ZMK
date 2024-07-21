@@ -64,7 +64,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <140>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
             retro-tap;
