@@ -73,13 +73,22 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
         };
     };
 
     macros {
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        commandspace {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <32 70>;
+        };
     };
 
     keymap {
@@ -130,7 +139,7 @@
 &trans  &trans            &trans            &trans            &trans                 &trans             &trans                                           &trans  &trans  &trans                &trans                 &trans            &trans            &trans
 &trans  &trans            &trans            &none             &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none   &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
 &trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)       &trans             &trans  &trans       &trans      &trans  &trans  &trans  &trans  &kp LA(NUMBER_5)      &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &trans
-&trans  &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans  &trans                &trans                 &trans            &trans            &trans
+&trans  &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans  &kp RS(RA(M))         &trans                 &trans            &trans            &trans
 &trans  &trans            &trans            &trans            &trans                                    &mo 5   &kp LA(TAB)  &trans      &trans  &trans  &trans          &trans                &trans                 &trans            &trans            &trans
             >;
         };
