@@ -89,6 +89,16 @@
             bindings = <&kp LG(SPACE)>;
             key-positions = <32 70>;
         };
+
+        commandt {
+            bindings = <&kp RG(T)>;
+            key-positions = <41 19>;
+        };
+
+        commandw {
+            bindings = <&kp RG(W)>;
+            key-positions = <41 16>;
+        };
     };
 
     keymap {
