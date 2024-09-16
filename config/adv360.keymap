@@ -99,6 +99,11 @@
             bindings = <&kp RG(W)>;
             key-positions = <41 16>;
         };
+
+        shortcatlauncher {
+            bindings = <&kp RS(RA(RC(RG(R))))>;
+            key-positions = <69 18>;
+        };
     };
 
     keymap {
