@@ -38,8 +38,6 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
         };
 
         voldpauseplay: voldpauseplay {
