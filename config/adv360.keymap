@@ -76,6 +76,7 @@
             tapping-term-ms = <230>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
+            retro-tap;
         };
     };
 
