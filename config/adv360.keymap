@@ -89,6 +89,19 @@
             quick-tap-ms = <100>;
             flavor = "tap-unless-interrupted";
         };
+
+        elt: elt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ELT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            retro-tap;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75>;
+        };
     };
 
     macros {
@@ -130,7 +143,7 @@
             bindings = <
 &kp EQUAL   &kp N1             &kp N2               &kp N3          &kp N4              &kp N5  &tog 1                                                                                  &mo 3      &kp N6  &kp N7               &kp N8           &kp N9               &kp N0                &kp MINUS
 &caps_word  &kp Q              &kp W                &kp E           &kp R               &kp T   &none                                                                                   &none      &kp Y   &kp U                &kp I            &kp O                &kp P                 &kp BSLH
-&lt 6 ESC   &hms LEFT_SHIFT A  &hms LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G   &none          &kp LEFT_COMMAND  &none              &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none      &kp H   &ht RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &ht RIGHT_SHIFT SEMI  &kp SQT
+&elt 6 ESC  &hms LEFT_SHIFT A  &hms LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G   &none          &kp LEFT_COMMAND  &none              &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none      &kp H   &ht RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &ht RIGHT_SHIFT SEMI  &kp SQT
 &kp END     &kp Z              &kp X                &kp C           &kp V               &kp B                                    &kp RC(RG(Q))      &none                                          &kp N   &kp M                &kp COMMA        &kp DOT              &kp FSLH              &kp RSHFT
 &mo 2       &kp GRAVE          &kp EQUAL            &kp LEFT        &kp RIGHT                   &kp BACKSPACE  &kp TAB           &none              &none              &lt 4 ENTER      &kp SPACE          &kp DOWN             &kp UP           &kp LBKT             &kp RBKT              &mo 2
             >;
