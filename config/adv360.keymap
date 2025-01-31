@@ -111,6 +111,41 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        htr: htr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 36 46 47 48 49 50 51 52 60 61 62 63 64 65 66 67>;
+        };
+
+        htlf: htlf {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTLF";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 68 69 70 71 72 73 74 75 53 37>;
+        };
+
+        htls: htls {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTLS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <100>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 69 70 71 72 73 74 75 37 53 68>;
+        };
     };
 
     macros {
@@ -155,11 +190,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL   &kp N1             &kp N2               &kp N3          &kp N4              &kp N5  &tog 1                                                                                  &mo 3      &kp N6  &kp N7               &kp N8           &kp N9               &kp N0                &kp MINUS
-&caps_word  &kp Q              &kp W                &kp E           &kp R               &kp T   &none                                                                                   &none      &kp Y   &kp U                &kp I            &kp O                &kp P                 &kp BSLH
-&elt 6 ESC  &hms LEFT_SHIFT A  &hms LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G   &none                  &kp LEFT_COMMAND  &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none      &kp H   &ht RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &ht RIGHT_SHIFT SEMI  &kp SQT
-&kp END     &kp Z              &kp X                &kp C           &kp V               &kp B                                            &none      &none                                          &kp N   &kp M                &kp COMMA        &kp DOT              &kp FSLH              &kp RSHFT
-&mo 2       &kp GRAVE          &elt 7 EQUAL         &kp LEFT        &kp RIGHT                   &backSpaceShiftDelete  &elt 7 TAB        &none      &none              &lt 4 ENTER      &kp SPACE          &kp DOWN             &kp UP           &kp LBKT             &kp RBKT              &mo 2
+&kp EQUAL   &kp N1              &kp N2                &kp N3            &kp N4                &kp N5  &tog 1                                                                                  &mo 3      &kp N6  &kp N7                &kp N8            &kp N9                &kp N0                 &kp MINUS
+&caps_word  &kp Q               &kp W                 &kp E             &kp R                 &kp T   &none                                                                                   &none      &kp Y   &kp U                 &kp I             &kp O                 &kp P                  &kp BSLH
+&elt 6 ESC  &htls LEFT_SHIFT A  &htls LEFT_CONTROL S  &htlf LEFT_ALT D  &htlf LEFT_COMMAND F  &kp G   &none                  &kp LEFT_COMMAND  &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none      &kp H   &htr RIGHT_COMMAND J  &htr RIGHT_ALT K  &htr RIGHT_CONTROL L  &htr RIGHT_SHIFT SEMI  &kp SQT
+&kp END     &kp Z               &kp X                 &kp C             &kp V                 &kp B                                            &none      &none                                          &kp N   &kp M                 &kp COMMA         &kp DOT               &kp FSLH               &kp RSHFT
+&mo 2       &kp GRAVE           &elt 7 EQUAL          &kp LEFT          &kp RIGHT                     &backSpaceShiftDelete  &elt 7 TAB        &none      &none              &lt 4 ENTER      &kp SPACE          &kp DOWN              &kp UP            &kp LBKT              &kp RBKT               &mo 2
             >;
         };
 
@@ -195,11 +230,11 @@
 
         hyper {
             bindings = <
-&trans  &trans            &trans            &trans            &trans                 &trans             &trans                                           &trans  &trans  &trans                &trans                 &trans            &trans            &trans
-&trans  &trans            &trans            &none             &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none   &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
-&trans  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)       &trans             &trans  &trans       &trans      &trans  &trans  &trans  &trans  &kp LA(NUMBER_5)      &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &trans
-&trans  &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans  &kp RS(RA(M))         &trans                 &trans            &trans            &trans
-&trans  &trans            &trans            &trans            &trans                                    &mo 5   &kp LA(TAB)  &trans      &trans  &trans  &trans          &trans                &trans                 &trans            &trans            &trans
+&trans       &trans            &trans            &trans            &trans                 &trans             &trans                                           &trans  &trans  &trans                &trans                 &trans            &trans            &trans
+&trans       &trans            &trans            &none             &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none   &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
+&kp RA(TAB)  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)       &trans             &trans  &trans       &trans      &trans  &trans  &trans  &trans  &kp LA(NUMBER_5)      &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &trans
+&trans       &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans  &kp RS(RA(M))         &trans                 &trans            &trans            &trans
+&trans       &trans            &trans            &trans            &trans                                    &mo 5   &kp LA(TAB)  &trans      &trans  &trans  &trans          &trans                &trans                 &trans            &trans            &trans
             >;
         };
 
