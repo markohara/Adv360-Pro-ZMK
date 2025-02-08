@@ -218,11 +218,6 @@
             bindings = <&kp RC(RG(Q))>;
             key-positions = <35 36>;
         };
-
-        mediaPause {
-            bindings = <&kp C_PLAY_PAUSE>;
-            key-positions = <53 68>;
-        };
     };
 
     keymap {
