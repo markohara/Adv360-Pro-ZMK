@@ -178,7 +178,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <50>;
             flavor = "tap-preferred";
         };
     };
@@ -301,9 +301,9 @@
         newkeypad {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans                            &trans                            &trans                            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &autoshift NUMBER_7 LS(NUMBER_7)  &autoshift N8 NUMBER_8            &autoshift NUMBER_9 NUMBER_9      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &autoshift NUMBER_4 LS(NUMBER_4)  &autoshift N5 LS(N5)              &autoshift NUMBER_6 LS(NUMBER_6)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &autoshift NUMBER_1 LS(NUMBER_1)  &autoshift NUMBER_2 LS(NUMBER_2)  &autoshift NUMBER_3 END           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &autoshift LS(NUMBER_7) NUMBER_7  &autoshift LS(NUMBER_8) NUMBER_8  &autoshift LS(NUMBER_9) NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &autoshift LS(NUMBER_4) NUMBER_4  &autoshift LS(NUMBER_5) NUMBER_5  &autoshift LS(NUMBER_6) NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &autoshift LS(NUMBER_1) NUMBER_1  &autoshift LS(NUMBER_2) NUMBER_2  &autoshift END NUMBER_3           &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &kp N0          &trans                            &trans                            &trans                            &trans  &trans
             >;
         };
