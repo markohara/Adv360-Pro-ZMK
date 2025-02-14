@@ -110,7 +110,7 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
+            mods = <(MOD_RSFT)>;
         };
 
         htr: htr {
@@ -183,6 +183,51 @@
             quick-tap-ms = <50>;
             flavor = "tap-preferred";
         };
+
+        sqOShiftAt: sqOShiftAt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "[ @";
+            bindings = <&kp LEFT_BRACKET>, <&kp AT_SIGN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        curOShiftHash: curOShiftHash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CUROSHIFTHASH";
+            bindings = <&kp LEFT_BRACE>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        parOShiftDol: parOShiftDol {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PAROSHIFTDOL";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp DOLLAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        parCShiftAmp: parCShiftAmp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARCSHIFTAMP";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        curCShiftAst: curCShiftAst {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CURCSHIFTAST";
+            bindings = <&kp RIGHT_BRACE>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -227,11 +272,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL                         &kp EXCLAMATION    &kp N2               &kp N3          &kp N4              &kp N5  &tog 1                                                                                   &mo 3      &kp N6  &kp N7                &kp N8           &kp N9               &kp N0                           &kp MINUS
-&caps_word                        &kp Q              &kp W                &kp E           &kp R               &kp T   &none                                                                                    &none      &kp Y   &kp U                 &kp I            &kp O                &kp P                            &kp BSLH
-&elt 6 ESC                        &hms LEFT_SHIFT A  &hms LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G   &none                  &kp TAB     &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP         &none      &kp H   &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftright RIGHT_SHIFT SEMI  &kp SQT
-&kp LS(LC(LA(LG(LEFT_COMMAND))))  &kp Z              &kp X                &kp C           &kp V               &kp B                                      &none      &kp C_PREVIOUS                                        &kp N   &kp M                 &kp COMMA        &kp DOT              &kp FSLH                         &kp RSHFT
-&mo 2                             &kp GRAVE          &none                &mo 7           &none                       &backSpaceShiftDelete  &kp DELETE  &none      &kp C_NEXT         &instantlaytap 4 ENTER  &kp SPACE          &none                 &none            &none                &none                            &mo 2
+&kp EQUAL                         &kp EXCLAMATION    &sqOShiftAt          &curOShiftHash  &parOShiftDol       &kp PERCENT  &tog 1                                                                                   &mo 3      &kp CARET  &parCShiftAmp         &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                 &kp MINUS
+&caps_word                        &kp Q              &kp W                &kp E           &kp R               &kp T        &none                                                                                    &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                            &kp BSLH
+&elt 6 ESC                        &hms LEFT_SHIFT A  &hms LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G        &none                  &kp TAB     &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP         &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftright RIGHT_SHIFT SEMI  &kp SQT
+&kp LS(LC(LA(LG(LEFT_COMMAND))))  &kp Z              &kp X                &kp C           &kp V               &kp B                                           &none      &kp C_PREVIOUS                                        &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                         &kp RSHFT
+&mo 2                             &kp GRAVE          &none                &mo 7           &none                            &backSpaceShiftDelete  &kp DELETE  &none      &kp C_NEXT         &instantlaytap 4 ENTER  &kp SPACE             &none                 &none            &none                &none                            &mo 2
             >;
         };
 
@@ -285,13 +330,13 @@
             >;
         };
 
-        NavSymbol {
+        Nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans                 &trans           &trans             &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &none     &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LEFT_BRACKET   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN               &kp UP           &kp RIGHT          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &none     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans                 &trans           &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
             >;
         };
 
@@ -299,7 +344,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &autoshift LS(NUMBER_7) NUMBER_7  &autoshift LS(NUMBER_8) NUMBER_8  &autoshift LS(NUMBER_9) NUMBER_9  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &autoshift LS(NUMBER_4) NUMBER_4  &autoshift LS(NUMBER_5) NUMBER_5  &autoshift LS(NUMBER_6) NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &autoshift LS(NUMBER_1) NUMBER_1  &autoshift LS(NUMBER_2) NUMBER_5  &autoshift LS(NUMBER_3) NUMBER_3  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &autoshift LS(NUMBER_1) NUMBER_1  &autoshift LS(NUMBER_2) NUMBER_5  &autoshift END NUMBER_3           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &none                             &autoshift LS(NUMBER_0) NUMBER_0  &none                             &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans                            &trans                            &trans                            &trans  &trans
             >;
