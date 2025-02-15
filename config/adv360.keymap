@@ -237,6 +237,20 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
+
+        htfshiftLeft: htfshiftLeft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTFSHIFTLEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+            quick-tap-ms = <75>;
+            hold-trigger-on-release;
+            retro-tap;
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 68 69 70 71 72 73 74 75 53 37>;
+        };
     };
 
     macros {
@@ -281,11 +295,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL                         &kp EXCLAMATION   &sqOShiftAt         &curOShiftHash  &parOShiftDol       &dolShiftpercent  &tog 1                                                                                   &mo 3      &kp CARET  &parCShiftAmp         &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                 &kp MINUS
-&caps_word                        &kp Q             &kp W               &kp E           &kp R               &kp T             &none                                                                                    &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                            &kp BSLH
-&elt 6 ESC                        &ht LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none                  &kp TAB     &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP         &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftright RIGHT_SHIFT SEMI  &kp SQT
-&kp LS(LC(LA(LG(LEFT_COMMAND))))  &kp Z             &kp X               &kp C           &kp V               &kp B                                                &none      &kp C_PREVIOUS                                        &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                         &kp RSHFT
-&mo 2                             &kp GRAVE         &none               &mo 7           &none                                 &backSpaceShiftDelete  &kp DELETE  &none      &kp C_NEXT         &instantlaytap 4 ENTER  &kp SPACE             &none                 &none            &none                &none                            &mo 2
+&kp EQUAL                         &kp EXCLAMATION             &sqOShiftAt         &curOShiftHash  &parOShiftDol       &dolShiftpercent  &tog 1                                                                                   &mo 3      &kp CARET  &parCShiftAmp         &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                &kp MINUS
+&caps_word                        &kp Q                       &kp W               &kp E           &kp R               &kp T             &none                                                                                    &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                           &kp BSLH
+&elt 6 ESC                        &htfshiftLeft LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none                  &kp TAB     &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP         &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftLeft RIGHT_SHIFT SEMI  &kp SQT
+&kp LS(LC(LA(LG(LEFT_COMMAND))))  &kp Z                       &kp X               &kp C           &kp V               &kp B                                                &none      &kp C_PREVIOUS                                        &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
+&mo 2                             &kp GRAVE                   &none               &mo 7           &none                                 &backSpaceShiftDelete  &kp DELETE  &none      &kp C_NEXT         &instantlaytap 4 ENTER  &kp SPACE             &none                 &none            &none                &none                           &mo 2
             >;
         };
 
