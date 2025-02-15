@@ -184,46 +184,45 @@
             flavor = "tap-preferred";
         };
 
-        sqOShiftAt: sqOShiftAt {
+        sqCShiftAt: sqCShiftAt {
             compatible = "zmk,behavior-mod-morph";
-            label = "[ @";
-            bindings = <&kp LEFT_BRACKET>, <&kp AT_SIGN>;
+            bindings = <&kp RIGHT_BRACKET>, <&kp AT_SIGN>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        curOShiftHash: curOShiftHash {
+        curCShiftHash: curCShiftHash {
             compatible = "zmk,behavior-mod-morph";
-            label = "CUROSHIFTHASH";
-            bindings = <&kp LEFT_BRACE>, <&kp END>;
+            label = "CURCSHIFTHASH";
+            bindings = <&kp RIGHT_BRACE>, <&kp END>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        parOShiftDol: parOShiftDol {
+        parCShiftDol: parCShiftDol {
             compatible = "zmk,behavior-mod-morph";
-            label = "PAROSHIFTDOL";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp DOLLAR>;
+            label = "PARCSHIFTDOL";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
         };
 
-        parCShiftAmp: parCShiftAmp {
+        parOShiftAmp: parOShiftAmp {
             compatible = "zmk,behavior-mod-morph";
-            label = "PARCSHIFTAMP";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp AMPS>;
+            label = "PAROSHIFTAMP";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp AMPS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
 
-        curCShiftAst: curCShiftAst {
+        curOShiftAst: curOShiftAst {
             compatible = "zmk,behavior-mod-morph";
-            label = "CURCSHIFTAST";
-            bindings = <&kp RIGHT_BRACE>, <&kp ASTERISK>;
+            label = "CUROSHIFTAST";
+            bindings = <&kp LEFT_BRACE>, <&kp ASTERISK>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -306,11 +305,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL                         &kp EXCLAMATION             &sqOShiftAt         &curOShiftHash  &parOShiftDol       &dolShiftpercent  &tog 1                                                                               &mo 3      &kp CARET  &parCShiftAmp         &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                &kp MINUS
-&caps_word                        &kp Q                       &kp W               &kp E           &kp R               &kp T             &none                                                                                &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                           &kp BSLH
-&elt 6 ESC                        &htfshiftLeft LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none              &kp TAB     &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP         &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftLeft RIGHT_SHIFT SEMI  &kp SQT
-&kp LS(LC(LA(LG(LEFT_COMMAND))))  &kp Z                       &kp X               &kp C           &kp V               &kp B                                            &none      &kp C_PREVIOUS                                        &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
-&mo 2                             &kp GRAVE                   &none               &mo 7           &none                                 &backspaceNav 6 0  &kp DELETE  &none      &kp C_NEXT         &instantlaytap 4 ENTER  &kp SPACE             &none                 &none            &none                &none                           &mo 2
+&kp EQUAL                         &kp EXCLAMATION             &sqCShiftAt         &curCShiftHash  &parCShiftDol       &dolShiftpercent  &tog 1                                                                                             &mo 3      &kp CARET  &parOShiftAmp         &curOShiftAst    &kp LEFT_BRACKET     &kp LS(NUMBER_3)                &kp MINUS
+&caps_word                        &kp Q                       &kp W               &kp E           &kp R               &kp T             &none                                                                                              &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                           &kp BSLH
+&elt 7 ESC                        &htfshiftLeft LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none                  &instantlaytap 6 TAB  &none      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP         &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftLeft RIGHT_SHIFT SEMI  &kp SQT
+&kp LS(LC(LA(LG(LEFT_COMMAND))))  &kp Z                       &kp X               &kp C           &kp V               &kp B                                                          &none      &kp C_PREVIOUS                                        &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                        &kp RSHFT
+&mo 2                             &kp GRAVE                   &none               &none           &none                                 &backSpaceShiftDelete  &kp DELETE            &none      &kp C_NEXT         &instantlaytap 4 ENTER  &kp SPACE             &none                 &none            &none                &none                           &mo 2
             >;
         };
 
@@ -346,11 +345,11 @@
 
         hyper {
             bindings = <
-&trans       &trans            &trans            &trans            &trans                 &trans             &trans                                           &trans  &trans  &trans                &trans                 &trans            &trans            &trans
-&trans       &trans            &trans            &none             &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none   &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
-&kp RA(TAB)  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)       &trans             &trans  &trans       &trans      &trans  &trans  &trans  &trans  &kp LA(NUMBER_5)      &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &trans
-&trans       &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans  &none                 &trans                 &trans            &trans            &trans
-&trans       &trans            &trans            &trans            &trans                                    &mo 5   &kp LA(TAB)  &trans      &trans  &trans  &trans          &trans                &trans                 &trans            &trans            &trans
+&trans       &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4           &kp N5             &trans                                           &trans  &kp NUMBER_6  &kp N7                &kp NUMBER_8           &kp N9            &kp N0            &trans
+&trans       &trans            &trans            &none             &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none         &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
+&kp RA(TAB)  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)       &trans             &trans  &trans       &trans      &trans  &trans  &trans  &trans        &kp LA(NUMBER_5)      &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &trans
+&trans       &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans        &none                 &trans                 &trans            &trans            &trans
+&trans       &trans            &trans            &trans            &trans                                    &mo 5   &kp LA(TAB)  &trans      &trans  &trans  &trans                &trans                &trans                 &trans            &trans            &trans
             >;
         };
 
