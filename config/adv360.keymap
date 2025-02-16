@@ -248,6 +248,8 @@
             quick-tap-ms = <100>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 68 69 70 71 72 73 74 75 53 37>;
+            retro-tap;
+            hold-while-undecided-linger;
         };
 
         backspaceNav: backspaceNav {
