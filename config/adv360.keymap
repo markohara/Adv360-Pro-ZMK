@@ -269,10 +269,10 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <130>;
-            retro-tap;
             hold-while-undecided;
+            hold-while-undecided-linger;
         };
 
         TapDanceBackSpace: TapDanceBackSpace {
