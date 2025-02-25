@@ -280,7 +280,7 @@
             #binding-cells = <0>;
             bindings = <&holdLayerTapKey 8 BACKSPACE>, <&kp BACKSPACE>;
 
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
         };
     };
 
