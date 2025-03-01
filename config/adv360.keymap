@@ -289,6 +289,13 @@
             mods = <(MOD_RSFT)>;
             keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
+
+        jhrm: jhrm {
+            compatible = "zmk,behavior-tap-dance";
+            label = "JHRM";
+            #binding-cells = <0>;
+            bindings = <&hmf RIGHT_COMMAND J>, <&kp J>;
+        };
     };
 
     macros {
@@ -333,11 +340,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL   &kp EXCLAMATION             &sqOShiftAt         &curOShiftHash  &parOShiftDol       &dolShiftpercent  &tog 1                                                                                               &mo 3      &kp CARET  &parCShiftAmp         &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                 &kp MINUS
-&caps_word  &kp Q                       &kp W               &kp E           &kp R               &kp T             &kp LEFT_SHIFT                                                                                       &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                            &kp BSLH
-&elt 6 ESC  &htfshiftLeft LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none                  &holdLayerTapKey 6 TAB  &none      &kp C_VOLUME_DOWN  &mo 9                   &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftright RIGHT_SHIFT SEMI  &kp SQT
-&mo 7       &kp Z                       &kp X               &kp C           &kp V               &kp B                                                            &none      &kp C_VOLUME_UP                                       &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                         &kp RSHFT
-&mo 2       &kp GRAVE                   &none               &none           &none                                 &backSpaceShiftDelete  &optBackShiftOptDelete  &none      &mediaSkipping     &instantlaytap 4 ENTER  &kp SPACE             &none                 &none            &none                &none                            &mo 2
+&kp EQUAL   &kp EXCLAMATION             &sqOShiftAt         &curOShiftHash  &parOShiftDol       &dolShiftpercent  &tog 1                                                                                               &mo 3      &kp CARET  &parCShiftAmp  &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                 &kp MINUS
+&caps_word  &kp Q                       &kp W               &kp E           &kp R               &kp T             &kp LEFT_SHIFT                                                                                       &none      &kp Y      &kp U          &kp I            &kp O                &kp P                            &kp BSLH
+&elt 6 ESC  &htfshiftLeft LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none                  &holdLayerTapKey 6 TAB  &kp C_VOLUME_DOWN      &none  &kp RCTRL               &none      &kp H      &jhrm          &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftright RIGHT_SHIFT SEMI  &kp SQT
+&mo 7       &kp Z                       &kp X               &kp C           &kp V               &kp B                                                            &kp C_VOLUME_UP        &mo 9                                     &kp N      &kp M          &kp COMMA        &kp DOT              &kp FSLH                         &kp RSHFT
+&mo 2       &kp GRAVE                   &none               &none           &none                                 &backSpaceShiftDelete  &optBackShiftOptDelete  &mediaSkipping         &none  &instantlaytap 4 ENTER  &kp SPACE             &none          &none            &none                &none                            &mo 2
             >;
         };
 
