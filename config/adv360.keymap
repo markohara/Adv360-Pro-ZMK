@@ -210,7 +210,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <160>;
+            quick-tap-ms = <200>;
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 68 69 70 71 72 73 74 75 53 37>;
             hold-trigger-on-release;
         };
@@ -268,6 +268,11 @@
         lock {
             bindings = <&kp RC(RG(Q))>;
             key-positions = <35 36>;
+        };
+
+        escaper {
+            bindings = <&kp ESC>;
+            key-positions = <29 43>;
         };
     };
 
