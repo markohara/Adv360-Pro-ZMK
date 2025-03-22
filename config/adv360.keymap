@@ -272,7 +272,7 @@
 
         escaper {
             bindings = <&kp ESC>;
-            key-positions = <29 43>;
+            key-positions = <70 65>;
         };
     };
 
