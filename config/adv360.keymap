@@ -282,7 +282,7 @@
         default_layer {
             bindings = <
 &kp EQUAL   &kp EXCLAMATION             &sqOShiftAt         &curOShiftHash  &parOShiftDol       &dolShiftPrecent  &none                                                                                                  &mo 3      &kp CARET  &parCShiftAmp         &curCShiftAst    &kp RIGHT_BRACKET    &kp LS(NUMBER_3)                 &kp MINUS
-&caps_word  &kp Q                       &kp W               &kp E           &kp R               &kp T             &kp LEFT_SHIFT                                                                                         &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                            &kp BSLH
+&caps_word  &kp Q                       &kp W               &kp E           &kp R               &kp T             &mo 10                                                                                                 &none      &kp Y      &kp U                 &kp I            &kp O                &kp P                            &kp BSLH
 &elt 6 ESC  &htfshiftLeft LEFT_SHIFT A  &ht LEFT_CONTROL S  &ht LEFT_ALT D  &ht LEFT_COMMAND F  &kp G             &none                  &kp LEFT_CONTROL  &kp C_VOLUME_DOWN      &kp RIGHT_ALT  &kp RCTRL               &none      &kp H      &hmf RIGHT_COMMAND J  &ht RIGHT_ALT K  &ht RIGHT_CONTROL L  &htfshiftright RIGHT_SHIFT SEMI  &kp SQT
 &mo 7       &kp Z                       &kp X               &kp C           &kp V               &kp B                                                      &kp C_VOLUME_UP        &mo 9                                             &kp N      &kp M                 &kp COMMA        &kp DOT              &kp FSLH                         &ht RSHFT F9
 &mo 2       &kp GRAVE                   &none               &kp LEFT        &kp RIGHT_ARROW                       &backSpaceShiftDelete  &kp TAB           &mediaSkipping         &kp ESC        &instantlaytap 4 ENTER  &kp SPACE             &kp DOWN_ARROW        &kp UP_ARROW     &none                &none                            &mo 2
@@ -376,6 +376,16 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans   &trans  &trans      &trans  &trans  &trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp N9  &kp NUMBER_0  &trans
 &trans  &trans        &trans        &trans        &trans        &trans                         &trans      &trans                  &trans        &trans        &trans        &trans  &trans        &trans
 &trans  &trans        &trans        &trans        &trans                      &kp TAB  &trans  &trans      &trans  &trans  &trans                &trans        &trans        &trans  &trans        &trans
+            >;
+        };
+
+        media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans      &trans             &trans           &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans      &trans             &trans           &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans      &trans             &trans           &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans              &trans             &trans           &trans      &trans  &trans
             >;
         };
     };
