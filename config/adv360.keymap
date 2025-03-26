@@ -274,6 +274,12 @@
             bindings = <&kp ESC>;
             key-positions = <70 65>;
         };
+
+        mediaToggle {
+            bindings = <&kp C_PP>;
+            key-positions = <41 42>;
+            layers = <10>;
+        };
     };
 
     keymap {
