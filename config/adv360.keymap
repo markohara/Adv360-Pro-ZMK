@@ -21,6 +21,8 @@
             bindings = <&kp RET>;
         };
 
+        #endif
+
         center: center {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -29,8 +31,6 @@
                       , <&macro_release &kp LEFT_CONTROL &kp GLOBE>;
             label = "CENTER";
         };
-
-        #endif
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
