@@ -23,15 +23,6 @@
 
         #endif
 
-        center: center {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_press &kp LEFT_CONTROL &kp LANG1>
-                      , <&macro_tap &kp C>
-                      , <&macro_release &kp LEFT_CONTROL &kp LANG1>;
-            label = "CENTER";
-        };
-
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -346,7 +337,7 @@
         hyper {
             bindings = <
 &trans       &kp NUMBER_1      &kp NUMBER_2      &kp NUMBER_3      &kp NUMBER_4           &kp N5             &trans                                           &trans  &kp NUMBER_6  &kp N7                &kp NUMBER_8           &kp N9            &kp N0            &trans
-&trans       &trans            &trans            &center           &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none         &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
+&trans       &trans            &trans            &kp LS(LA(C))     &kp LS(LA(LC(LG(R))))  &kp LC(LS(EQUAL))  &trans                                           &trans  &none         &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none             &trans            &trans
 &kp RA(TAB)  &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)       &trans             &trans  &trans       &trans      &trans  &trans  &trans  &trans        &kp LA(NUMBER_5)      &kp LA(NUMBER_6)       &kp LA(NUMBER_7)  &kp LA(NUMBER_8)  &trans
 &trans       &trans            &trans            &trans            &trans                 &trans                                  &trans      &trans                  &trans        &none                 &trans                 &trans            &trans            &trans
 &trans       &trans            &trans            &trans            &trans                                    &mo 5   &kp LA(TAB)  &trans      &trans  &trans  &trans                &trans                &trans                 &trans            &trans            &trans
